@@ -1,38 +1,19 @@
-import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
 import { KPICard } from "./KPICard";
 
-const mockData = [
-  { month: "Jan", score: 45 },
-  { month: "Feb", score: 52 },
-  { month: "Mar", score: 48 },
-  { month: "Apr", score: 61 },
-  { month: "May", score: 55 },
-];
-
 export const NPSScore = () => {
-  const currentNPS = mockData[mockData.length - 1].score;
+  const latestScore = 8; // This would be replaced with real-time data
 
   return (
-    <KPICard title="Net Promoter Score (NPS)">
+    <KPICard title="Latest NPS Response">
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <span className="text-4xl font-bold text-primary">{currentNPS}</span>
-          <span className="text-sm text-gray-500">Last 5 months</span>
+          <span className="text-4xl font-bold text-primary">{latestScore}</span>
+          <span className="text-sm text-gray-500">Latest Score</span>
         </div>
-        <div className="h-[200px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={mockData}>
-              <XAxis dataKey="month" />
-              <Tooltip />
-              <Area
-                type="monotone"
-                dataKey="score"
-                stroke="#4F46E5"
-                fill="#818CF8"
-                fillOpacity={0.2}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
+        <div className="p-4 bg-gray-50 rounded-lg">
+          <p className="text-sm text-gray-600">
+            Last response received: {new Date().toLocaleTimeString()}
+          </p>
         </div>
       </div>
     </KPICard>
