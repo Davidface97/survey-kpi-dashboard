@@ -6,11 +6,11 @@ import { CallSummary } from "@/components/CallSummary";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-secondary/5 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Live Survey Responses</h1>
-          <span className="text-sm text-gray-500">
+          <h1 className="text-3xl font-bold text-secondary">Live Survey Responses</h1>
+          <span className="text-sm text-secondary/70">
             Last updated: {new Date().toLocaleTimeString()}
           </span>
         </div>

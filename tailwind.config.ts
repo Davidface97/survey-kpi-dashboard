@@ -25,16 +25,16 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#4F46E5",
+          DEFAULT: "#0074FF", // Brandeis Blue
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#818CF8",
+          DEFAULT: "#0F0937", // Cetacean Blue
           foreground: "#FFFFFF",
         },
         accent: {
-          DEFAULT: "#6366F1",
-          foreground: "#FFFFFF",
+          DEFAULT: "#00FB69", // Guppie Green
+          foreground: "#0F0937",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -52,6 +52,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        sans: ["Century Gothic", "Arial", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

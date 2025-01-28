@@ -8,9 +8,9 @@ interface KPICardProps {
 
 export const KPICard = ({ title, children, className }: KPICardProps) => {
   return (
-    <Card className={`shadow-lg hover:shadow-xl transition-shadow ${className}`}>
-      <CardHeader>
-        <CardTitle className="text-lg font-semibold text-gray-700">{title}</CardTitle>
+    <Card className={`shadow-lg hover:shadow-xl transition-shadow bg-white border-accent/20 ${className}`}>
+      <CardHeader className="bg-secondary/5">
+        <CardTitle className="text-lg font-semibold text-secondary">{title}</CardTitle>
       </CardHeader>
       <CardContent>{children}</CardContent>
     </Card>
