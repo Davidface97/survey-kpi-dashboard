@@ -54,7 +54,7 @@ export default {
         },
       },
       fontFamily: {
-        sans: ["Century Gothic", "Arial", "sans-serif"],
+        sans: ["Parkinsans", "Century Gothic", "Arial", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
