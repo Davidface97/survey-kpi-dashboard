@@ -38,5 +38,14 @@ export const useSurveyData = () => {
     });
   };
 
-  return { data, isLoading, error, handleWebhookData };
+  // Function to reset the dashboard
+  const resetDashboard = () => {
+    setData({ latestResponses: [] });
+    toast({
+      title: "Dashboard Reset",
+      description: "All survey data has been cleared",
+    });
+  };
+
+  return { data, isLoading, error, handleWebhookData, resetDashboard };
 };
