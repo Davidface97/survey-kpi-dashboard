@@ -1,3 +1,5 @@
+export type SurveyResponseType = 'nps' | 'csat' | 'yesNo' | 'feedback' | 'callSummary';
+
 export interface SurveyResponse {
   npsScore?: number;
   csatScore?: number;
@@ -7,12 +9,12 @@ export interface SurveyResponse {
   timestamp: string;
 }
 
-export interface SurveyData {
-  latestResponses: SurveyResponse[];
+// Webhook payload type for individual KPI updates
+export interface WebhookPayload {
+  type: SurveyResponseType;
+  data: Partial<SurveyResponse>;
 }
 
-// Webhook payload type
-export interface WebhookPayload {
-  type: 'survey_response';
-  data: SurveyResponse;
+export interface SurveyData {
+  latestResponses: SurveyResponse[];
 }
