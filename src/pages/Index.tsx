@@ -5,9 +5,10 @@ import { OpenFeedback } from "@/components/OpenFeedback";
 import { CallSummary } from "@/components/CallSummary";
 import { useSurveyData } from "@/hooks/useSurveyData";
 import { useToast } from "@/components/ui/use-toast";
+import { SurveyResponse } from "@/types/survey";
 
 const Index = () => {
-  const { data, isLoading, error } = useSurveyData();
+  const { data, isLoading, error, handleWebhookData } = useSurveyData();
   const { toast } = useToast();
 
   // Show loading state
@@ -28,7 +29,14 @@ const Index = () => {
     });
   }
 
-  const latestResponse = data?.latestResponses[0] || {};
+  const latestResponse: SurveyResponse = data?.latestResponses[0] || {
+    npsScore: undefined,
+    csatScore: undefined,
+    yesNoAnswer: undefined,
+    openFeedback: undefined,
+    callSummary: undefined,
+    timestamp: ''
+  };
 
   return (
     <div className="min-h-screen bg-secondary/5 p-8">
