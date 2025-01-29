@@ -10,3 +10,9 @@ export interface SurveyResponse {
 export interface SurveyData {
   latestResponses: SurveyResponse[];
 }
+
+// Webhook payload type
+export interface WebhookPayload {
+  type: 'survey_response';
+  data: SurveyResponse;
+}
